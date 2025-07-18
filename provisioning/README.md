@@ -1,4 +1,4 @@
-terragrunt run --all apply
+### terragrunt run --all apply
 20:46:39.157 INFO   The runner at . will be processed in the following order for command apply:
 Group 1
 - Unit ./terraform
