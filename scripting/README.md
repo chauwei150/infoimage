@@ -1,13 +1,32 @@
 ### ubuntu@ip-10-10-10-9:~/scripting$ bash monitoring.sh 
-Server is 10.10.10.9
-CPU_USAGE = 4.5
-MEM_USAGE = 46.3099
-DISK_USAGE = 54
-Server is 10.10.10.10
-CPU_USAGE = 0
-MEM_USAGE = 47.4521
-DISK_USAGE = 47
+ubuntu@ip-10-10-10-9:~/scripting$ bash monitoring.sh memory
 
+Server is 10.10.10.9
+MEM_USAGE = 42.0922
+Server is 10.10.10.10
+MEM_USAGE = 53.3825
+ubuntu@ip-10-10-10-9:~/scripting$ bash monitoring.sh cpu
+
+Server is 10.10.10.9
+CPU_USAGE = 0
+Server is 10.10.10.10
+CPU_USAGE = 4.8
+ubuntu@ip-10-10-10-9:~/scripting$ bash monitoring.sh disk
+
+Server is 10.10.10.9
+DISK_USAGE = 58
+Server is 10.10.10.10
+DISK_USAGE = 65
+ubuntu@ip-10-10-10-9:~/scripting$ bash monitoring.sh all
+
+Server is 10.10.10.9
+CPU_USAGE = 9.1
+MEM_USAGE = 41.7572
+DISK_USAGE = 58
+Server is 10.10.10.10
+CPU_USAGE = 4.8
+MEM_USAGE = 54.1615
+DISK_USAGE = 65
 
 ### ubuntu@ip-10-10-10-9:~/scripting$ bash nfs_status.sh 
 Server is 10.10.10.9
