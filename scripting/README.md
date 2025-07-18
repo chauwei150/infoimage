@@ -9,7 +9,7 @@ MEM_USAGE = 47.4521
 DISK_USAGE = 47
 
 
-ubuntu@ip-10-10-10-9:~/scripting$ bash nfs_status.sh 
+### ubuntu@ip-10-10-10-9:~/scripting$ bash nfs_status.sh 
 Server is 10.10.10.9
 FSTAB_MOUNTs_STATUS = 
 SOURCE                 FSTYPE   SIZE  USED  AVAIL USE% TARGET
