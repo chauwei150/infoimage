@@ -40,11 +40,7 @@ type=server
 
 
 
-        "discovered_interpreter_python": "/usr/bin/python3.12"
-    },
-    "changed": false,
-    "ping": "pong"
-}
+        
 
 ### 1. Install Datadog agent
 to follow Datadog web site install datadog agent
@@ -55,21 +51,20 @@ step b. assuming we already have inventory
 step c. create a datadog_playbook.yaml
 
 
-- name: Install the Datadog Agent
-- 
-  import_role:
-  
+---
+- hosts: all
+  become: true  # Use become for privilege escalation
+  tasks:
+    - name: Import the Datadog Agent role from the Datadog collection
+      import_role:
         name: datadog.dd.agent
-  
-
-  vars:
-  
-    datadog_api_key: "<YOUR_API_KEY>"
+      vars:
+        datadog_api_key: "14623xxxxxxxxxxxxxxxxxxxxxxxxx"
   
 
 step: d. ansible-playbook -i inventory.yaml datadog_playbook.yaml
 
-
+see datadog.status file
 
 ### 2. Install Docker
 to follow Docker web site install Docker 
