@@ -5,14 +5,19 @@
 Group 1
 - Unit ./terraform
 
-
 Are you sure you want to run 'terragrunt apply' in each unit of the run queue displayed above? (y/n) y
 20:46:46.345 INFO   [terraform] terraform: Initializing the backend...
+
 20:46:46.356 INFO   [terraform] terraform: Initializing provider plugins...
+
 20:46:46.357 INFO   [terraform] terraform: - Finding latest version of hashicorp/aws...
+
 20:46:46.863 INFO   [terraform] terraform: - Installing hashicorp/aws v6.4.0...
+
 20:46:56.504 INFO   [terraform] terraform: - Installed hashicorp/aws v6.4.0 (signed by HashiCorp)
+
 20:46:56.504 INFO   [terraform] terraform: Terraform has created a lock file .terraform.lock.hcl to record the provider
+
 20:46:56.504 INFO   [terraform] terraform: selections it made above. Include this file in your version control repository
 20:46:56.504 INFO   [terraform] terraform: so that Terraform can guarantee to make the same selections by default when
 20:46:56.504 INFO   [terraform] terraform: you run "terraform init" in the future.
