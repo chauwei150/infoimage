@@ -1,0 +1,12 @@
+---
+- hosts: nfs_client
+  become: true
+  gather_facts: true
+  tasks:
+    - name: Mount NFS share
+      ansible.posix.mount:
+        src: ip-10-10-10-10:/dev/utils  # Replace with your NFS server and share path
+        path: /mnt/utils  # Replace with your desired mount point
+        fstype: nfs
+        opts: "rw" # Example options, customize as needed
+        state: mounted
