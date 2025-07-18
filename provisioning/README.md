@@ -1,5 +1,9 @@
 ### 
 see ./terraform/variables.tf for all variables
+In the ./terraform/main.tf
+will create a VPC 10.10.0.0/16 similar ro VLAN 10
+create two VMs with IP 10.10.10.9 and 10.10.10.10
+in ubuntu 24.04
 
 terragrunt run --all apply
 
