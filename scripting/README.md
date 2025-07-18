@@ -1,23 +1,27 @@
-### ubuntu@ip-10-10-10-9:~/scripting$ bash monitoring.sh 
-ubuntu@ip-10-10-10-9:~/scripting$ bash monitoring.sh memory
+
+###ubuntu@ip-10-10-10-9:~/scripting$ bash monitoring.sh memory
 
 Server is 10.10.10.9
+
 MEM_USAGE = 42.0922
+
 Server is 10.10.10.10
+
 MEM_USAGE = 53.3825
-ubuntu@ip-10-10-10-9:~/scripting$ bash monitoring.sh cpu
+
+###ubuntu@ip-10-10-10-9:~/scripting$ bash monitoring.sh cpu
 
 Server is 10.10.10.9
 CPU_USAGE = 0
 Server is 10.10.10.10
 CPU_USAGE = 4.8
-ubuntu@ip-10-10-10-9:~/scripting$ bash monitoring.sh disk
+###ubuntu@ip-10-10-10-9:~/scripting$ bash monitoring.sh disk
 
 Server is 10.10.10.9
 DISK_USAGE = 58
 Server is 10.10.10.10
 DISK_USAGE = 65
-ubuntu@ip-10-10-10-9:~/scripting$ bash monitoring.sh all
+###ubuntu@ip-10-10-10-9:~/scripting$ bash monitoring.sh all
 
 Server is 10.10.10.9
 CPU_USAGE = 9.1
