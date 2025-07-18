@@ -2,6 +2,15 @@ assuimg we have two servers
 ip-10-10-10-9,
 ip-10-10-10-10
 
+In the provisioning
+what I did by using ansible
+1. install datadog agent
+Please see datadog.status
+2. install docker
+3. install docker compose
+4. install NFS server
+5. install NFS client
+   
 
 ### cat /etc/ansible/hosts 
 
