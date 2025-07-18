@@ -30,49 +30,12 @@ ansible_ssh_private_key_file=/home/ubuntu/.ssh/Infoimage.pem
 type=server
 
 
-### ansible all -m ping
-[WARNING]: Platform linux on host ip-10-10-10-10 is using the discovered Python interpreter at /usr/bin/python3.12, but future installation of another Python interpreter could
-change the meaning of that path. See https://docs.ansible.com/ansible-core/2.18/reference_appendices/interpreter_discovery.html for more information.
 
-ip-10-10-10-10 | SUCCESS => {
-    "ansible_facts": {
         "discovered_interpreter_python": "/usr/bin/python3.12"
     },
     "changed": false,
     "ping": "pong"
 }
-
-[WARNING]: Platform linux on host ip-10-10-10-9 is using the discovered Python interpreter at /usr/bin/python3.12, but future installation of another Python interpreter could
-change the meaning of that path. See https://docs.ansible.com/ansible-core/2.18/reference_appendices/interpreter_discovery.html for more information.
-
-ip-10-10-10-9 | SUCCESS => {
-    "ansible_facts": {
-        "discovered_interpreter_python": "/usr/bin/python3.12"
-    },
-    "changed": false,
-    "ping": "pong"
-}
-
-
-ansible nfs_client -m ping
-[WARNING]: Platform linux on host ip-10-10-10-9 is using the discovered Python interpreter at /usr/bin/python3.12, but future installation of another Python interpreter could
-change the meaning of that path. See https://docs.ansible.com/ansible-core/2.18/reference_appendices/interpreter_discovery.html for more information.
-
-ip-10-10-10-9 | SUCCESS => {
-
-    "ansible_facts": {
-    
-        "discovered_interpreter_python": "/usr/bin/python3.12"
-        
-    },
-    
-    "changed": false,
-    
-    "ping": "pong"
-    
-}
-
-
 
 ### 1. Install Datadog agent
 to follow Datadog web site install datadog agent
