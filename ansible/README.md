@@ -74,7 +74,7 @@ ip-10-10-10-9 | SUCCESS => {
 
 
 
-###1. Install Datadog agent
+### 1. Install Datadog agent
 to follow Datadog web site install datadog agent
 Make sure you're running an up-to-date version of Ansible on your control node.
 
