@@ -99,7 +99,7 @@ step: d. ansible-playbook -i inventory.yaml datadog_playbook.yaml
 
 
 
-2. Install Docker
+### 2. Install Docker
 to follow Docker web site install Docker 
 create docker_playbook.yaml
 
@@ -226,7 +226,7 @@ ip-10-10-10-10             : ok=9    changed=0    unreachable=0    failed=0    s
 ip-10-10-10-9              : ok=9    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
 
 
-3. Install Docker-compose
+### 3. Install Docker-compose
 create dockercompose_playbook.yaml
 
 ---
@@ -330,6 +330,7 @@ ip-10-10-10-10             : ok=5    changed=4    unreachable=0    failed=0    s
 ip-10-10-10-9              : ok=5    changed=4    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
 
 
+### Install NFS server on 10.10.10.10
 ansible-playbook nfsserver_deploy.yaml 
 
 PLAY [all] **************************************************************************************************************************************************************************
@@ -362,6 +363,7 @@ ip-10-10-10-10             : ok=5    changed=2    unreachable=0    failed=0    s
 ip-10-10-10-9              : ok=1    changed=0    unreachable=0    failed=0    skipped=3    rescued=0    ignored=0   
 
 
+### Install NFS client on 10.10.10.9
 ansible-playbook nfsclient_playbook.yaml 
 
 PLAY [nfs_client] *******************************************************************************************************************************************************************
