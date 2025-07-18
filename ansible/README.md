@@ -2,6 +2,7 @@ assuimg we have two servers
 ip-10-10-10-9
 ip-10-10-10-10
 
+
 ### cat /etc/ansible/hosts 
 
 [nfs_client] 
