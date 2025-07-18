@@ -1,4 +1,4 @@
-# ubuntu@ip-10-10-10-9:~/scripting$ bash monitoring.sh 
+### ubuntu@ip-10-10-10-9:~/scripting$ bash monitoring.sh 
 Server is 10.10.10.9
 CPU_USAGE = 4.5
 MEM_USAGE = 46.3099
