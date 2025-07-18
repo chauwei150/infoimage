@@ -19,20 +19,35 @@ Are you sure you want to run 'terragrunt apply' in each unit of the run queue di
 20:46:56.504 INFO   [terraform] terraform: Terraform has created a lock file .terraform.lock.hcl to record the provider
 
 20:46:56.504 INFO   [terraform] terraform: selections it made above. Include this file in your version control repository
+
 20:46:56.504 INFO   [terraform] terraform: so that Terraform can guarantee to make the same selections by default when
+
 20:46:56.504 INFO   [terraform] terraform: you run "terraform init" in the future.
+
 20:46:56.506 INFO   [terraform] terraform: Terraform has been successfully initialized!
+
 20:46:56.506 INFO   [terraform] terraform: 
+
 20:46:56.506 INFO   [terraform] terraform: You may now begin working with Terraform. Try running "terraform plan" to see
+
 20:46:56.506 INFO   [terraform] terraform: any changes that are required for your infrastructure. All Terraform commands
+
 20:46:56.506 INFO   [terraform] terraform: should now work.
+
 20:46:56.506 INFO   [terraform] terraform: If you ever set or change modules or backend configuration for Terraform,
+
 20:46:56.506 INFO   [terraform] terraform: rerun this command to reinitialize your working directory. If you forget, other
+
 20:46:56.507 INFO   [terraform] terraform: commands will detect it and remind you to do so if necessary.
+
 20:47:02.788 STDOUT [terraform] terraform: Terraform used the selected providers to generate the following execution
+
 20:47:02.788 STDOUT [terraform] terraform: plan. Resource actions are indicated with the following symbols:
+
 20:47:02.788 STDOUT [terraform] terraform:   + create
+
 20:47:02.788 STDOUT [terraform] terraform: Terraform will perform the following actions:
+
 20:47:02.789 STDOUT [terraform] terraform:   # aws_eip.public_http1["instance-http1-1"] will be created
 20:47:02.789 STDOUT [terraform] terraform:   + resource "aws_eip" "public_http1" {
 20:47:02.789 STDOUT [terraform] terraform:       + allocation_id        = (known after apply)
@@ -43,7 +58,7 @@ Are you sure you want to run 'terragrunt apply' in each unit of the run queue di
 20:47:02.789 STDOUT [terraform] terraform:       + domain               = "vpc"
 20:47:02.789 STDOUT [terraform] terraform:       + id                   = (known after apply)
 20:47:02.789 STDOUT [terraform] terraform:       + instance             = (known after apply)
-20:47:02.789 STDOUT [terraform] terraform:       + ipam_pool_id         = (known after apply)
+20:47:02.789 STDOUT [terraform] terraform:       + ipam_pool_id         = (known after apply)20:47:02.789 STDOUT [terraform] 
 20:47:02.789 STDOUT [terraform] terraform:       + network_border_group = (known after apply)
 20:47:02.789 STDOUT [terraform] terraform:       + network_interface    = (known after apply)
 20:47:02.789 STDOUT [terraform] terraform:       + private_dns          = (known after apply)
