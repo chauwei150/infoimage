@@ -4,7 +4,7 @@ ip-10-10-10-10
 
 ### cat /etc/ansible/hosts 
 
-[nfs_client]
+[nfs_client] \n
 ip-10-10-10-9 ansible_host=10.10.10.9 
 [nfs_server]
 ip-10-10-10-10 ansible_host=10.10.10.10  
