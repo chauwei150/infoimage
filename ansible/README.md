@@ -4,18 +4,30 @@ ip-10-10-10-10
 
 ### cat /etc/ansible/hosts 
 
-[nfs_client] \n
+[nfs_client] 
+
 ip-10-10-10-9 ansible_host=10.10.10.9 
+
 [nfs_server]
+
 ip-10-10-10-10 ansible_host=10.10.10.10  
+
 [nfs_client:vars]
+
 ansible_user=ubuntu
+
 ansible_ssh_private_key_file=/home/ubuntu/.ssh/Infoimage.pem
+
 type=client
+
 [nfs_server:vars]
+
 ansible_user=ubuntu
+
 ansible_ssh_private_key_file=/home/ubuntu/.ssh/Infoimage.pem
+
 type=server
+
 
 ### ansible all -m ping
 [WARNING]: Platform linux on host ip-10-10-10-10 is using the discovered Python interpreter at /usr/bin/python3.12, but future installation of another Python interpreter could
