@@ -49,104 +49,201 @@ Are you sure you want to run 'terragrunt apply' in each unit of the run queue di
 20:47:02.788 STDOUT [terraform] terraform: Terraform will perform the following actions:
 
 20:47:02.789 STDOUT [terraform] terraform:   # aws_eip.public_http1["instance-http1-1"] will be created
+
 20:47:02.789 STDOUT [terraform] terraform:   + resource "aws_eip" "public_http1" {
+
 20:47:02.789 STDOUT [terraform] terraform:       + allocation_id        = (known after apply)
+
 20:47:02.789 STDOUT [terraform] terraform:       + arn                  = (known after apply)
+
 20:47:02.789 STDOUT [terraform] terraform:       + association_id       = (known after apply)
+
 20:47:02.789 STDOUT [terraform] terraform:       + carrier_ip           = (known after apply)
+
 20:47:02.789 STDOUT [terraform] terraform:       + customer_owned_ip    = (known after apply)
+
 20:47:02.789 STDOUT [terraform] terraform:       + domain               = "vpc"
+
 20:47:02.789 STDOUT [terraform] terraform:       + id                   = (known after apply)
+
 20:47:02.789 STDOUT [terraform] terraform:       + instance             = (known after apply)
+
 20:47:02.789 STDOUT [terraform] terraform:       + ipam_pool_id         = (known after apply)20:47:02.789 STDOUT [terraform] 
+
 20:47:02.789 STDOUT [terraform] terraform:       + network_border_group = (known after apply)
+
 20:47:02.789 STDOUT [terraform] terraform:       + network_interface    = (known after apply)
+
 20:47:02.789 STDOUT [terraform] terraform:       + private_dns          = (known after apply)
+
 20:47:02.789 STDOUT [terraform] terraform:       + private_ip           = (known after apply)
+
 20:47:02.789 STDOUT [terraform] terraform:       + ptr_record           = (known after apply)
+
 20:47:02.789 STDOUT [terraform] terraform:       + public_dns           = (known after apply)
+
 20:47:02.789 STDOUT [terraform] terraform:       + public_ip            = (known after apply)
+
 20:47:02.789 STDOUT [terraform] terraform:       + public_ipv4_pool     = (known after apply)
+
 20:47:02.789 STDOUT [terraform] terraform:       + region               = "us-west-2"
+
 20:47:02.789 STDOUT [terraform] terraform:       + tags                 = {
+
 20:47:02.789 STDOUT [terraform] terraform:           + "Name" = "public-http1-instance-http1-1"
+
 20:47:02.789 STDOUT [terraform] terraform:         }
+
 20:47:02.789 STDOUT [terraform] terraform:       + tags_all             = {
+
 20:47:02.789 STDOUT [terraform] terraform:           + "Name" = "public-http1-instance-http1-1"
+
 20:47:02.789 STDOUT [terraform] terraform:         }
+
 20:47:02.789 STDOUT [terraform] terraform:     }
+
 20:47:02.789 STDOUT [terraform] terraform:   # aws_eip.public_http4["instance-http4-1"] will be created
+
 20:47:02.789 STDOUT [terraform] terraform:   + resource "aws_eip" "public_http4" {
+
 20:47:02.789 STDOUT [terraform] terraform:       + allocation_id        = (known after apply)
+
 20:47:02.790 STDOUT [terraform] terraform:       + arn                  = (known after apply)
+
 20:47:02.790 STDOUT [terraform] terraform:       + association_id       = (known after apply)
+
 20:47:02.790 STDOUT [terraform] terraform:       + carrier_ip           = (known after apply)
+
 20:47:02.790 STDOUT [terraform] terraform:       + customer_owned_ip    = (known after apply)
 20:47:02.790 STDOUT [terraform] terraform:       + domain               = "vpc"
 20:47:02.790 STDOUT [terraform] terraform:       + id                   = (known after apply)
+
 20:47:02.790 STDOUT [terraform] terraform:       + instance             = (known after apply)
+
 20:47:02.790 STDOUT [terraform] terraform:       + ipam_pool_id         = (known after apply)
+
 20:47:02.790 STDOUT [terraform] terraform:       + network_border_group = (known after apply)
+
 20:47:02.790 STDOUT [terraform] terraform:       + network_interface    = (known after apply)
+
 20:47:02.790 STDOUT [terraform] terraform:       + private_dns          = (known after apply)
+
 20:47:02.790 STDOUT [terraform] terraform:       + private_ip           = (known after apply)
+
 20:47:02.790 STDOUT [terraform] terraform:       + ptr_record           = (known after apply)
+
 20:47:02.790 STDOUT [terraform] terraform:       + public_dns           = (known after apply)
+
 20:47:02.790 STDOUT [terraform] terraform:       + public_ip            = (known after apply)
+
 20:47:02.790 STDOUT [terraform] terraform:       + public_ipv4_pool     = (known after apply)
+
 20:47:02.790 STDOUT [terraform] terraform:       + region               = "us-west-2"
+
 20:47:02.791 STDOUT [terraform] terraform:       + tags                 = {
+
 20:47:02.791 STDOUT [terraform] terraform:           + "Name" = "public-http4-instance-http4-1"
+
 20:47:02.791 STDOUT [terraform] terraform:         }
+
 20:47:02.791 STDOUT [terraform] terraform:       + tags_all             = {
+
 20:47:02.791 STDOUT [terraform] terraform:           + "Name" = "public-http4-instance-http4-1"
+
 20:47:02.791 STDOUT [terraform] terraform:         }
+
 20:47:02.791 STDOUT [terraform] terraform:     }
+
 20:47:02.791 STDOUT [terraform] terraform:   # aws_instance.http1["instance-http1-1"] will be created
+
 20:47:02.791 STDOUT [terraform] terraform:   + resource "aws_instance" "http1" {
+
 20:47:02.791 STDOUT [terraform] terraform:       + ami                                  = "ami-05f991c49d264708f"
+
 20:47:02.791 STDOUT [terraform] terraform:       + arn                                  = (known after apply)
+
 20:47:02.791 STDOUT [terraform] terraform:       + associate_public_ip_address          = (known after apply)
+
 20:47:02.791 STDOUT [terraform] terraform:       + availability_zone                    = (known after apply)
+
 20:47:02.791 STDOUT [terraform] terraform:       + disable_api_stop                     = (known after apply)
+
 20:47:02.791 STDOUT [terraform] terraform:       + disable_api_termination              = (known after apply)
+
 20:47:02.791 STDOUT [terraform] terraform:       + ebs_optimized                        = (known after apply)
+
 20:47:02.791 STDOUT [terraform] terraform:       + enable_primary_ipv6                  = (known after apply)
+
 20:47:02.791 STDOUT [terraform] terraform:       + get_password_data                    = false
+
 20:47:02.791 STDOUT [terraform] terraform:       + host_id                              = (known after apply)
+
 20:47:02.791 STDOUT [terraform] terraform:       + host_resource_group_arn              = (known after apply)
+
 20:47:02.791 STDOUT [terraform] terraform:       + iam_instance_profile                 = (known after apply)
+
 20:47:02.791 STDOUT [terraform] terraform:       + id                                   = (known after apply)
+
 20:47:02.791 STDOUT [terraform] terraform:       + instance_initiated_shutdown_behavior = (known after apply)
+
 20:47:02.791 STDOUT [terraform] terraform:       + instance_lifecycle                   = (known after apply)
+
 20:47:02.791 STDOUT [terraform] terraform:       + instance_state                       = (known after apply)
+
 20:47:02.791 STDOUT [terraform] terraform:       + instance_type                        = "t3.micro"
+
 20:47:02.791 STDOUT [terraform] terraform:       + ipv6_address_count                   = (known after apply)
+
 20:47:02.791 STDOUT [terraform] terraform:       + ipv6_addresses                       = (known after apply)
+
 20:47:02.791 STDOUT [terraform] terraform:       + key_name                             = "Infoimage"
+
 20:47:02.791 STDOUT [terraform] terraform:       + monitoring                           = (known after apply)
+
 20:47:02.791 STDOUT [terraform] terraform:       + outpost_arn                          = (known after apply)
+
 20:47:02.791 STDOUT [terraform] terraform:       + password_data                        = (known after apply)
+
 20:47:02.791 STDOUT [terraform] terraform:       + placement_group                      = (known after apply)
+
 20:47:02.792 STDOUT [terraform] terraform:       + placement_partition_number           = (known after apply)
+
 20:47:02.792 STDOUT [terraform] terraform:       + primary_network_interface_id         = (known after apply)
+
 20:47:02.792 STDOUT [terraform] terraform:       + private_dns                          = (known after apply)
+
 20:47:02.792 STDOUT [terraform] terraform:       + private_ip                           = "10.10.10.9"
+
 20:47:02.792 STDOUT [terraform] terraform:       + public_dns                           = (known after apply)
+
 20:47:02.792 STDOUT [terraform] terraform:       + public_ip                            = (known after apply)
+
 20:47:02.792 STDOUT [terraform] terraform:       + region                               = "us-west-2"
+
 20:47:02.792 STDOUT [terraform] terraform:       + secondary_private_ips                = (known after apply)
+
 20:47:02.792 STDOUT [terraform] terraform:       + security_groups                      = (known after apply)
+
 20:47:02.792 STDOUT [terraform] terraform:       + source_dest_check                    = true
+
 20:47:02.792 STDOUT [terraform] terraform:       + spot_instance_request_id             = (known after apply)
+
 20:47:02.792 STDOUT [terraform] terraform:       + subnet_id                            = (known after apply)
+
 20:47:02.792 STDOUT [terraform] terraform:       + tags                                 = {
+
 20:47:02.793 STDOUT [terraform] terraform:           + "Environment" = "development"
+
 20:47:02.793 STDOUT [terraform] terraform:           + "Name"        = "instance-http1-1"
+
 20:47:02.793 STDOUT [terraform] terraform:         }
+
 20:47:02.793 STDOUT [terraform] terraform:       + tags_all                             = {
+
 20:47:02.793 STDOUT [terraform] terraform:           + "Environment" = "development"
+
 20:47:02.793 STDOUT [terraform] terraform:           + "Name"        = "instance-http1-1"
+
 20:47:02.793 STDOUT [terraform] terraform:         }
 20:47:02.793 STDOUT [terraform] terraform:       + tenancy                              = (known after apply)
 20:47:02.793 STDOUT [terraform] terraform:       + user_data_base64                     = (known after apply)
@@ -457,13 +554,21 @@ Are you sure you want to run 'terragrunt apply' in each unit of the run queue di
 20:47:34.374 STDOUT [terraform] terraform: aws_eip.public_http4["instance-http4-1"]: Creation complete after 2s [id=eipalloc-0a4e5a35462fb6d83]
 20:47:34.440 STDOUT [terraform] terraform: 
 20:47:34.440 STDOUT [terraform] terraform: Apply complete! Resources: 11 added, 0 changed, 0 destroyed.
+
 20:47:34.441 STDOUT [terraform] terraform: 
 20:47:34.441 STDOUT [terraform] terraform: Outputs:
+
 20:47:34.441 STDOUT [terraform] terraform: 
 20:47:34.441 STDOUT [terraform] terraform: http_ip1 = {
+
 20:47:34.441 STDOUT [terraform] terraform:   "i-0607b209080226dff" = "10.10.10.9"
+
 20:47:34.441 STDOUT [terraform] terraform: }
+
 20:47:34.442 STDOUT [terraform] terraform: http_ip4 = {
+
 20:47:34.442 STDOUT [terraform] terraform:   "i-02fa0c4bb5b45e54a" = "10.10.10.10"
+
 20:47:34.442 STDOUT [terraform] terraform: }
+
 
