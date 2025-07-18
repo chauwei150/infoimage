@@ -1,5 +1,5 @@
 assuimg we have two servers
-ip-10-10-10-9
+ip-10-10-10-9,
 ip-10-10-10-10
 
 
@@ -33,6 +33,7 @@ type=server
 ### ansible all -m ping
 [WARNING]: Platform linux on host ip-10-10-10-10 is using the discovered Python interpreter at /usr/bin/python3.12, but future installation of another Python interpreter could
 change the meaning of that path. See https://docs.ansible.com/ansible-core/2.18/reference_appendices/interpreter_discovery.html for more information.
+
 ip-10-10-10-10 | SUCCESS => {
     "ansible_facts": {
         "discovered_interpreter_python": "/usr/bin/python3.12"
@@ -40,8 +41,10 @@ ip-10-10-10-10 | SUCCESS => {
     "changed": false,
     "ping": "pong"
 }
+
 [WARNING]: Platform linux on host ip-10-10-10-9 is using the discovered Python interpreter at /usr/bin/python3.12, but future installation of another Python interpreter could
 change the meaning of that path. See https://docs.ansible.com/ansible-core/2.18/reference_appendices/interpreter_discovery.html for more information.
+
 ip-10-10-10-9 | SUCCESS => {
     "ansible_facts": {
         "discovered_interpreter_python": "/usr/bin/python3.12"
@@ -49,6 +52,7 @@ ip-10-10-10-9 | SUCCESS => {
     "changed": false,
     "ping": "pong"
 }
+
 
 ansible nfs_client -m ping
 [WARNING]: Platform linux on host ip-10-10-10-9 is using the discovered Python interpreter at /usr/bin/python3.12, but future installation of another Python interpreter could
