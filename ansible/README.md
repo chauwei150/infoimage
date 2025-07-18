@@ -2,16 +2,7 @@ assuimg we have two servers
 ip-10-10-10-9
 ip-10-10-10-10
 
-cat /etc/ansible/hosts 
-# This is the default ansible 'hosts' file.
-#
-# It should live in /etc/ansible/hosts
-#
-#   - Comments begin with the '#' character
-#   - Blank lines are ignored
-#   - Groups of hosts are delimited by [header] elements
-#   - You can enter hostnames or ip addresses
-#   - A hostname/ip can be a member of multiple groups
+### cat /etc/ansible/hosts 
 
 [nfs_client]
 ip-10-10-10-9 ansible_host=10.10.10.9 
@@ -26,7 +17,7 @@ ansible_user=ubuntu
 ansible_ssh_private_key_file=/home/ubuntu/.ssh/Infoimage.pem
 type=server
 
-ansible all -m ping
+### ansible all -m ping
 [WARNING]: Platform linux on host ip-10-10-10-10 is using the discovered Python interpreter at /usr/bin/python3.12, but future installation of another Python interpreter could
 change the meaning of that path. See https://docs.ansible.com/ansible-core/2.18/reference_appendices/interpreter_discovery.html for more information.
 ip-10-10-10-10 | SUCCESS => {
@@ -49,13 +40,21 @@ ip-10-10-10-9 | SUCCESS => {
 ansible nfs_client -m ping
 [WARNING]: Platform linux on host ip-10-10-10-9 is using the discovered Python interpreter at /usr/bin/python3.12, but future installation of another Python interpreter could
 change the meaning of that path. See https://docs.ansible.com/ansible-core/2.18/reference_appendices/interpreter_discovery.html for more information.
+
 ip-10-10-10-9 | SUCCESS => {
+
     "ansible_facts": {
+    
         "discovered_interpreter_python": "/usr/bin/python3.12"
+        
     },
+    
     "changed": false,
+    
     "ping": "pong"
+    
 }
+
 
 
 1. Install Datadog agent
