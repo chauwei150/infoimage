@@ -74,7 +74,7 @@ ip-10-10-10-9 | SUCCESS => {
 
 
 
-1. Install Datadog agent
+###1. Install Datadog agent
 to follow Datadog web site install datadog agent
 Make sure you're running an up-to-date version of Ansible on your control node.
 
@@ -82,14 +82,21 @@ step a. ansible-galaxy collection install datadog.dd
 step b. assuming we already have inventory
 step c. create a datadog_playbook.yaml
 
+
 - name: Install the Datadog Agent
+- 
   import_role:
+  
         name: datadog.dd.agent
+  
 
   vars:
+  
     datadog_api_key: "<YOUR_API_KEY>"
+  
 
 step: d. ansible-playbook -i inventory.yaml datadog_playbook.yaml
+
 
 
 2. Install Docker
