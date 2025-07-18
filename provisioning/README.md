@@ -1,4 +1,7 @@
-### terragrunt run --all apply
+### 
+see ./terraform/variables.tf for all variables
+
+terragrunt run --all apply
 
 20:46:39.157 INFO   The runner at . will be processed in the following order for command apply:
 
