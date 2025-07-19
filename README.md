@@ -10,7 +10,7 @@ So, I provision two VMs by using my own AWS account.
 
 still,I assign this two VM with IP 10.10.10.9, and the other is 10.10.10.10
 
-Both use ubuntu 24.4 in the 10.10.0.0/16 can be considered in VLAN 10
+Both use ubuntu 24.4 in the 10.10.10.0/24 can be considered in VLAN 10
 
 in each directory
 
