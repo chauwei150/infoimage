@@ -1,3 +1,20 @@
+### Running playbooks
+
+Always use the `--check` option to do a dry run before actually running an
+Ansible command. That way you can make sure you're targeting the correct
+hosts and the correct plays will be run (in the correct order).
+
+Protip: put `--check` first in the command in case you accidentally start
+the command before `--limit`ing, or the shell interprets your command in an
+unexpected way!
+
+Protip: `--check` will often hit an error even though the actual playbook would complete successfully.
+This often happens when the playbook creates directories, changes permissions, or creates symlinks.
+An alternative approach is to use `--list-hosts --list-tasks` instead of `--check`.
+This lists the hosts that will be affected and all tasks that will be run (it may list tasks
+with a `when` condition even if that condition would be false when running the play though),
+which achieves most of what we want from `--check` anyway.
+
 assuimg we have two servers
 ip-10-10-10-9,
 ip-10-10-10-10
