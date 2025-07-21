@@ -34,6 +34,23 @@ resource "aws_security_group" "administration" {
   }
 }
 
+ # Open nfs port
+  ingress {
+    from_port   = 2049
+    to_port     = 2049
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+# Open nfs port
+  ingress {
+    from_port   = 111
+    to_port     = 111
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+
 # Open web port
 resource "aws_security_group" "web" {
   name        = "web"
