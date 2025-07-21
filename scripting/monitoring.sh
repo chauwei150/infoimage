@@ -1,5 +1,33 @@
 #!/bin/bash
-
+if [ "$1" = "-h" ] || [ "$1" = "" ]; then
+        echo "";
+        echo "USAGE:";
+        echo "";
+        echo "    monitoring.sh device-type";
+        echo "";
+        echo "";
+        echo "";
+        echo "    DEVICE-TYPE    --> [ CPU | MEMORY | DISK | NFS | ALL]";
+        echo "";
+        echo "";
+        echo "";
+        echo "EXAMPLES:";
+        echo "    monitoring.sh CPU";
+        echo "        --> Will deplay CPU usage for each host";
+        echo "";
+        echo "    monitoring.sh MEMORY";
+        echo "        --> Will deplay memory fro each host";
+        echo "";
+        echo "    monitoring.sh DISK";
+        echo "        --> Will deplay disk usage form each host";
+        echo "";
+        echo "    monitoring.sh NFS";
+        echo "        --> Will deplay NFS status for each host";
+        echo "";
+        echo "    monitoring.sh ALL";
+        echo "        --> Will deplay COY, memory, disk, NFS status for each host";
+        echo "";
+else
 Device=$1
 
 # Define thresholds
@@ -24,7 +52,7 @@ check_resources() {
     local Device=$2
 
     # Get CPU usage 
-    if [ $Device = "cpu" ]; then
+    if [ $Device = "cpu" ] || [ $Device = "CPU" ] ; then
       CPU_USAGE=$(ssh -i $key $server "top -bn1 | grep 'Cpu(s)' | sed 's/.*, *\([0-9.]*\)%* id.*/\1/' | awk '{print 100 - \$1}'")
       echo "CPU_USAGE = $CPU_USAGE"
 
@@ -35,7 +63,7 @@ check_resources() {
 
 
     # Get Memory usage
-    elif [ $Device = "memory" ]; then
+    elif [ $Device = "memory" ] || [ $Device = "MEMORY" ] ; then
       MEM_USAGE=$(ssh -i $key $server "free | grep Mem | awk '{print \$3/\$2 * 100.0}'")
       echo "MEM_USAGE = $MEM_USAGE"
 
@@ -46,7 +74,7 @@ check_resources() {
 
 
     # Get Disk usage
-    elif [ $Device = "disk" ]; then
+    elif [ $Device = "disk" ] || [ $Device = "DISK" ] ; then
       DISK_USAGE=$(ssh -i $key $server "df / | grep / | awk '{print \$5}' | sed 's/%//'")
       echo "DISK_USAGE = $DISK_USAGE"
 
@@ -55,7 +83,7 @@ check_resources() {
         send_alert "Disk usage on $server is above threshold: ${DISK_USAGE}%"
       fi
     #Get NFS status
-    elif [ $Device = "nfs" ]; then
+    elif [ $Device = "nfs" ] || [ $Device = "NFS" ] ; then
      # get Info from fstab         
       FSTAB_MOUNTs_STATUS=$(ssh -i $key $server "findmnt -D -t nosquashfs,notmpfs,nodevtmpfs")
       echo "FSTAB_MOUNTs_STATUS = "
@@ -66,7 +94,8 @@ check_resources() {
       echo "NFS_MOUNTs_STATUS = "
       echo "$NFS_MOUNTs_STATUS"
       echo
-    else
+    elif [ $Device = "all" ] || [ $Device = "ALL" ] ; then
+
       # Get CPU usage 
       CPU_USAGE=$(ssh -i $key $server "top -bn1 | grep 'Cpu(s)' | sed 's/.*, *\([0-9.]*\)%* id.*/\1/' | awk '{print 100 - \$1}'")
       echo "CPU_USAGE = $CPU_USAGE"
@@ -115,3 +144,5 @@ for server in "${SERVERS[@]}"; do
     echo "Server is $server"
     check_resources $server $1
 done
+
+fi
