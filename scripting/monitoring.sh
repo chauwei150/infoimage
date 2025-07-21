@@ -82,6 +82,7 @@ check_resources() {
       if (( $DISK_USAGE > $DISK_THRESHOLD )); then
         send_alert "Disk usage on $server is above threshold: ${DISK_USAGE}%"
       fi
+      
     #Get NFS status
     elif [ $Device = "nfs" ] || [ $Device = "NFS" ] ; then
      # get Info from fstab         
