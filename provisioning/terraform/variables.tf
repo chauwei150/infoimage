@@ -21,6 +21,10 @@ variable "vpc_name" {
   type = string
 }
 
+variable "internet-gateway_name" {
+  type = string
+}
+
 #### VPC Network
 variable "vpc_cidr" {
   type    = string

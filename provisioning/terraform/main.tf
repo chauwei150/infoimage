@@ -17,11 +17,12 @@ resource "aws_subnet" "http1" {
   }
   depends_on = [aws_internet_gateway.gw]
 }
+
 # External gateway configuration
 resource "aws_internet_gateway" "gw" {
   vpc_id = aws_vpc.terraform.id
   tags = {
-    Name = "internet-gateway"
+    Name = var.internet-gateway_name
   }
 }
 
