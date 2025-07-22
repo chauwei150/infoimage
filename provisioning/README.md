@@ -1,5 +1,5 @@
 ### 
-see ./terraform/variables.tf for all variables
+see ./terraform/variables.tf  and terragrunt.hcl for all variables
 
 In the ./terraform/main.tf
 
