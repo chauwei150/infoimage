@@ -24,17 +24,8 @@ resource "aws_security_group" "administration" {
     protocol    = "icmp"
     cidr_blocks = ["0.0.0.0/0"]
   }
-
-  # Open access to public network
-  egress {
-    from_port   = 0
-    to_port     = 0
-    protocol    = "-1"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-}
-
- # Open nfs port
+  
+   # Open nfs port
   ingress {
     from_port   = 2049
     to_port     = 2049
@@ -49,6 +40,16 @@ resource "aws_security_group" "administration" {
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
+
+  # Open access to public network
+  egress {
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+}
+
 
 
 # Open web port

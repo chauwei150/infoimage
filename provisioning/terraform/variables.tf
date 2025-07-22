@@ -17,13 +17,22 @@ variable "aws_amis" {
 
 # parms file for aws ec2 cloud
 
+variable "vpc_name" {
+  type = string
+}
 
 #### VPC Network
 variable "vpc_cidr" {
   type    = string
-  default = "10.10.0.0/16"
 }
 
+variable "privateIP"{
+  type   = string
+}
+
+variable "subnet_name" {
+  type   = string
+}
 
 #### HTTP PARAMS
 variable "network_http1" {

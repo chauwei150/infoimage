@@ -7,9 +7,3 @@ output "http_ip1" {
   }
 }
 
-output "http_ip4" {
-  value = {
-    for instance in aws_instance.http4 :
-    instance.id => instance.private_ip
-  }
-}
