@@ -17,6 +17,13 @@ variable "aws_amis" {
 
 # parms file for aws ec2 cloud
 
+variable "server_amount" {
+  type = number
+}
+
+variable "start_ip" {
+  type    = number
+}
 
 variable "vpc_id" {
   type = string

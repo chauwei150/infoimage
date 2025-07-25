@@ -17,17 +17,16 @@ provider "aws" {
   
 # Create instance
 resource "aws_instance" "http_servers" {
-  count         = 5
+  count         = var.server_amount
   ami           = var.aws_amis[var.aws_region]
   instance_type = var.instance_type1
   associate_public_ip_address = true  
-  private_ip = cidrhost(
-    "10.10.10.0/24",
-    11 + count.index,
+  private_ip    = cidrhost(
+    "10.10.10.0/24", var.start_ip + count.index
   )
 
   key_name      = var.key_name
-  subnet_id = var.subnet_id
+  subnet_id     = var.subnet_id
   vpc_security_group_ids = [
     var.sg_administration_id,
     var.sg_web_id,
