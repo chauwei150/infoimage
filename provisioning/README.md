@@ -3,25 +3,35 @@ infrastructure-live
 
 ├── non-prod
 
-│   ├── .terragrunt-version
+│ 
+├── .terragrunt-version
 
-│   ├── .terraform-version
+│
+├── .terraform-version
 
-│   └── us-west-2
+│ 
+└── us-west-2
 
-│       ├── qa
+│ 
+├── qa
 
-│       │   ├── vpc
+│   
+│   ├── vpc
 
-│       │   └── webserver-cluster
+│ 
+│   └── webserver-cluster
 
-│       └── stage
+│ 
+└── stage
 
-│           ├── vpc
+│   
+├── vpc
 
-│           └── webserver-cluster
+│ 
+└── webserver-cluster
 
 └── prod
+
 
     ├── .terragrunt-version
     
