@@ -1,22 +1,40 @@
 ### 
 infrastructure-live
+
 ├── non-prod
+
 │   ├── .terragrunt-version
+
 │   ├── .terraform-version
+
 │   └── us-west-2
+
 │       ├── qa
+
 │       │   ├── vpc
+
 │       │   └── webserver-cluster
+
 │       └── stage
-│           ├── mysql
+
+│           ├── vpc
+
 │           └── webserver-cluster
+
 └── prod
+
     ├── .terragrunt-version
+    
     ├── .terraform-version
+    
     └── us-west-2
+    
         └── prod
+        
             ├── vpc
+            
             └── webserver-clustersee ./vpc/variables.tf  and terragrunt.hcl for all variables
+            
 
 In the ./vpc/main.tf
 
