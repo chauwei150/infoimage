@@ -28,8 +28,8 @@ resource "aws_instance" "http_servers" {
   key_name      = var.key_name
   subnet_id     = var.subnet_id
   vpc_security_group_ids = [
-    var.sg_administration_id,
-    var.sg_web_id,
+    aws_security_group.administration.id,
+    aws_security_group.web.id,
   ]
   tags = {
     Name = "http-server-${count.index + 1}"

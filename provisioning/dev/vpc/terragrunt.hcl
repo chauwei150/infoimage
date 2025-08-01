@@ -6,7 +6,7 @@ locals {
 }
 
 terraform {
-   source = "../../infor-modules/vpc"
+   source = "../../infra-modules/vpc"
 }
 
 inputs = {

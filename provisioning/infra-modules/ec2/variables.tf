@@ -33,13 +33,6 @@ variable "subnet_id" {
   type = string
 }
 
-variable "sg_administration_id" {
-  type = string
-}
-
-variable "sg_web_id" {
-  type = string
-}
 
 #### HTTP PARAMS
 variable "network_http1" {
