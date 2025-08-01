@@ -22,7 +22,7 @@ resource "aws_instance" "http_servers" {
   instance_type = var.instance_type1
   associate_public_ip_address = true  
   private_ip    = cidrhost(
-    "10.1.10.0/24", var.start_ip + count.index
+    var.subnet_cidr, var.start_ip + count.index
   )
 
   key_name      = var.key_name

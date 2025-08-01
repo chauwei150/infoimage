@@ -33,13 +33,17 @@ variable "subnet_id" {
   type = string
 }
 
+variable "subnet_cidr" {
+  type = string
+}
+
 
 #### HTTP PARAMS
 variable "network_http1" {
   type = map(string)
   default = {
     subnet_name = "subnet_http1"
-    cidr        = "10.10.10.0/24"
+    cidr        = "10.1.10.0/24"
   }
 }
 
@@ -48,14 +52,14 @@ variable "network_http2" {
   type = map(string)
   default = {
     subnet_name = "subnet_http2"
-    cidr        = "10.10.20.0/24"
+    cidr        = "10.1.20.0/24"
   }
 }
 variable "network_http3" {
   type = map(string)
   default = {
     subnet_name = "subnet_http3"
-    cidr        = "10.10.30.0/24"
+    cidr        = "10.1.30.0/24"
   }
 }
 
